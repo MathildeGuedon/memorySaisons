@@ -1,6 +1,10 @@
 # Memory
 
-Projet de memory promo D2WM 021_F 
+Projet de memory Formation ENI Rennes 
+
+## Aperçu
+
+<img src="assets/captures-ecran/banniere_memory.png" alt="Bannière du jeu Memory" title="Hero Banner du memory" width="100%">
 
 ## A propos
 
