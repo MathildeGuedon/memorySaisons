@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="connectez-vous pour enregistrer vos scores">
+    <title>ENI MEMORY - connexion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/connexion.css">
+</head>
+
+<body id="body">
+    <header class="grid container-fluid">
+        <h1 class="text-center m-3">ENI MEMORY - Connexion</h1>
+
+        <div class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand bg-dark border-bottom border-body rounded m-3 p-2">
+                <div class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connexion.html">Connexion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="compte.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jeu.html">Jouer</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container-md max-width-auto d-flex justify-content-center">
+            <form id="form-connexion" class="bg-dark rounded m-3 p-3">
+                <h2 class="text-center">Connectez-vous</h2>
+
+                <div class="m-1">
+                    <label for="email-utilisateur" class="form-label">Entrez votre email</label>
+                    <input type="email" class="form-control-plaintext" autofocus autocomplete="off"
+                        id="email-utilisateur-connexion" placeholder="votre email" required>
+                    <hr>
+                </div>
+
+                <div class="m-1">
+                    <label for="mot-de-passe" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control-plaintext" autocomplete="off" id="mot-de-passe-connexion"
+                        placeholder="mot de passe" required>
+                    <hr>
+                </div>
+
+                <div class="d-flex justify-content-around">
+                    <button type="submit" class="btn  btn-teal" id="btn-soumission-connexion">Connexion</button>
+                    <button type="button" class="btn btn-teal"><a href="index.html"
+                            class="nav-link">Annuler</a></button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a class="nav-link mb-3 me-3 text-end" href="mentionsLegales.html">Mentions légales</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="js/connexion.js"></script>
+
+</body>
+
+</html>

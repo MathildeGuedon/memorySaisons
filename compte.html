@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="gérez votre profil et vos préférences" />
+    <title>ENI MEMORY - Profil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/compte.css" />
+</head>
+
+<body id="body">
+    <header class="grid container-fluid">
+        <h1 class="text-center m-3">ENI MEMORY - Profil</h1>
+
+        <div class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand bg-dark border-bottom border-body rounded m-3 p-2">
+                <div class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connexion.html">Connexion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="compte.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jeu.html">Jouer</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container-md max-width-auto d-flex justify-content-center">
+            <div class="bg-dark rounded d-flex justify-content-center flex-column align-item-center w-auto p-3 mb-3 mt-3"
+                id="compte-tuile-profil">
+                <h2 id="titre-profil" class="text-center m-3 justify-content-center">Profil</h2>
+                <img src="assets/question_mark.png" alt="photo de profil" width="150px"
+                    class="img-fluid align-self-center p-3" id="photo-profil" />
+                <div class="row d-flex flex-column m-1">
+                    <label for="nom-utilisateur-connexion" class="col-sm-10 col-form-label">Nom d'utilisateur</label>
+                    <div class="col-sm-10">
+                        <p id="nom-utilisateur-connexion">Utilisateur</p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row d-flex flex-column m-1">
+                    <label for="email-connexion" class="col-sm-10 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <p id="email-connexion">email@example.com</p>
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-around">
+                    <div class="m-3 justify-content-center">
+                        <label for="select-choix-set-memory">Choix du Memory</label>
+                        <select class="form-select bg-secondary text-dark-emphasis w-auto mt-2"
+                            aria-label="Default select example" id="select-choix-set-memory">
+                            <option selected value="0">Automne</option>
+                            <option value="1">Hiver</option>
+                            <option value="2">Printemps</option>
+                            <option value="3">Eté</option>
+                        </select>
+                    </div>
+                    <div class="m-3 d-flex flex-column align-item-center">
+                        <label for="select-choix-taille-memory">Taille du Memory</label>
+                        <select class="form-select bg-secondary text-dark-emphasis w-auto mt-2"
+                            aria-label="Default select example" id="select-choix-taille-memory">
+                            <option selected value="6">4 * 3</option>
+                            <option value="8">4 * 4</option>
+                            <option value="12">6 * 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="affichage-miniature-memory" class="d-flex justify-content-center">
+                    <img src="assets/automne/citrouille.png" height="150px" />
+                    <p id="message-enregistrement-param-jeu" class="p-2 rounded">Préférences enregistrées</p>
+                </div>
+
+                <div class="d-flex justify-content-center m-3">
+                    <button type="submit" class="btn btn-teal" id="btn-validation-param-jeu">
+                        Enregistrez options
+                    </button>
+                </div>
+                <div class="d-flex flex-column justify-content-center mt-3 mb-3">
+                    <h2 class="text-center" id="derniers-scores">Derniers scores</h2>
+                    <div id="container-table" class="text-center">
+                        <table
+                            class="table-sm table table-success table-striped table-bordered mt-3 text-center text-wrap"
+                            id="tableau-scores">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Rang</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Taille</th>
+                                    <th scope="col">Temps</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="body-scores-joueur">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="jeu.html"><button type="button" class="btn btn-teal" id="btn-jouer">
+                                Jouer une partie
+                            </button></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a class="nav-link mb-3 me-3 text-end" href="mentionsLegales.html">Mentions légales</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <script src="js/compte.js"></script>
+</body>
+
+</html>

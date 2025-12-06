@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex : 1;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+a:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h3{
+    margin-top: 30px;
+}
+
+.conteneur-cartes{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+}
+
+#carte-404-1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 200px;
+    aspect-ratio: 1;
+    background-color: rgb(33, 37, 41);
+    transform: rotate(25deg);
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+#carte-404-2{
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    width: 200px;
+    aspect-ratio: 1;
+    background-color: rgb(33, 37, 41);
+    transform: rotate(-25deg);
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+#carte-404-1 img, #carte-404-2 img{
+    width: 66%;
+    height: 66%;
+}

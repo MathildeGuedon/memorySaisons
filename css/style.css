@@ -1,0 +1,50 @@
+#body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Dosis", sans-serif;
+    background-color: rgb(2, 161, 161);
+}
+
+.navbar{
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+main{
+    flex: 1;
+}
+
+.btn-teal {
+    background-color: rgb(2, 161, 161);
+    border: none;
+}
+
+.btn-teal:hover{
+    background-color: rgb(1, 85, 81);
+    color: #DEE2E6;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.btn-teal:active{
+    color: #DEE2E6;
+}
+
+.btn-dark-teal{
+    background-color: rgb(1, 85, 81);
+    border: none;
+}
+
+.btn-dark-teal:hover{
+    background-color: rgb(1, 51, 48);
+    color: #DEE2E6;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.btn-dark-teal:active{
+    color: #DEE2E6;
+    background-color: rgb(33, 37, 41);
+}
+
+footer a:hover{
+    font-weight: bold;
+}

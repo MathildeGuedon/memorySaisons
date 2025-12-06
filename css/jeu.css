@@ -1,0 +1,60 @@
+#zone-jeu {
+  max-width: 1000px;
+}
+
+/* container de la carte : "film plastique" qui fixe la hauteur et la largeur 
+La propriété perspective donne un effet 3D (peut être retiré) */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+/* "squelette" de la carte sur lequel on colle les deux faces de la carte */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* faces images, elles sont retournées au départ*/
+.flip-card-Memory {
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  transform: rotateY(180deg);
+}
+
+/* Position absolue des deux faces de la carte sur le squelette */
+.flip-card-Memory, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+
+}
+
+/* face arrière des cartes, visible au départ */
+.flip-card-back {
+  background-color: rgb(1, 85, 81);
+  color: white;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+#tableau-meilleurs-scores {
+  max-width: fit-content;
+  align-self: center;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+#btn-profil:active{
+  color: #DEE2E6;
+    background-color: rgb(33, 37, 41);
+}

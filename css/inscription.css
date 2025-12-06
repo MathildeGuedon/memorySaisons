@@ -1,0 +1,56 @@
+#form-inscription{
+width: fit-content;
+box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+#nom-utilisateur, 
+#email-utilisateur, 
+#mot-de-passe,
+#mot-de-passe-confirmation{
+    border: none;
+}
+
+#nom-utilisateur:focus, 
+#email-utilisateur:focus, 
+#mot-de-passe:focus,
+#mot-de-passe-confirmation:focus{
+    box-shadow: none;
+}
+
+.progress{
+    height : 5px;
+    visibility: hidden;
+}
+
+.legende-progress{
+    visibility: hidden;
+}
+
+#progress-bar-mdp {
+  height: 5px;
+  visibility: visible; /* ou gérer via JS */
+}
+
+#progress-bar-mdp-jauge {
+  width: 0%;
+  transition: width 0.3s ease;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(1, 51, 48)0%, rgb(1, 85, 81)100%);
+}
+
+#bloc-mot-de-passe{
+    position: relative;
+}
+
+#message-erreur-saisie,
+#message-redondance-saisie{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    text-align: center;
+    color: black;
+    background-color: #FBB46A;
+    border-radius: 5px;
+}

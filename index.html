@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jouez au memory et tentez de battre votre record">
+    <title>ENI MEMORY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+    <header class="grid container-fluid">
+        <h1 class="text-center m-3">ENI MEMORY - Accueil</h1>
+        <div class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand bg-dark border-bottom border-body rounded m-3 p-2">
+                <div class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connexion.html">Connexion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="compte.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jeu.html">Jouer</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="m-3 p-3 rounded">
+        <div class="text-center">
+            <p>Bienvenue sur le site du Memory de l'ENI.</p>
+            <p>Venez jouer avec nous et faites le meilleur score possible.</p>
+        </div>
+        <h2 class="text-center">Règle du jeu :</h2>
+        <div class="justify-content-center d-flex">
+            <ul>
+                <li>Retournez deux cartes. Si les images sont identiques, le jeu laisse les cartes visibles.</li>
+                <li>Si les images sont différentes, les cartes se retournent faces cachées là où elles étaient.</li>
+                <li>La partie est terminée lorsque toutes les cartes ont été assemblées par paires.</li>
+            </ul>
+        </div>
+        <img src="assets/printemps/miniature-printemps.png" alt="12 cartes de memory sur le thème du printemps"
+            title="cartes de memory thème fruits et légumes" width="40%" class="img-fluid rounded mx-auto d-block m-3"
+            id="index-main-img-legumes">
+        <div id="main-indication-sauvegarde" class="text-center mt-3">
+            <p>Si vous voulez enregistrer vos préférences et votre score, inscrivez-vous via le formulaire.</p>
+            <p>Le jeu garde les <strong>5 meilleures</strong> scores.</p>
+            <p>Si vous voulez relancer une partie, cliquer sur <strong>la barre d'espace</strong>.</p>
+        </div>
+    </main>
+    <footer>
+        <a class="nav-link mb-3 me-3 text-end" href="mentionsLegales.html">Mentions légales</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+</body>
+
+</html>

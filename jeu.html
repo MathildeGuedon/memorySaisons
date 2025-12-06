@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jouez au memory">
+    <title>ENI MEMORY - Jeu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jeu.css">
+</head>
+
+<body id="body">
+    <header class="grid container-fluid">
+        <h1 class="text-center m-3">ENI MEMORY - Jeu</h1>
+        <div class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand bg-dark border-bottom border-body rounded m-3 p-2">
+                <div class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connexion.html">Connexion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="compte.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jeu.html">Jouer</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="p-3 d-flex col flex-column justify-content-center text-center">
+        <div id="presentation-jeu">
+            <p>Tentez de gagner avec le moins d'essais possibles</p>
+            <p>Appuyez sur <strong>la barre d'Espace</strong> pour recommencer une partie</p>
+            <p>Nombre de tours : <span id="message-nb-tours">0</span></p>
+        </div>
+        <div id="zone-jeu" class="container-fluid d-flex flex-column text-center justify-content-center rounded">
+            <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-4 justify-content-center w-auto" id="plateau-jeu">
+            </div>
+        </div>
+        <div id="divGagnant"></div>
+        <div class="d-flex flex-column justify-content-center align-item-center container">
+            <h2 class="text-center justify-content-center">Derniers scores</h2>
+            <div class="d-flex flex-column justify-content-center text-center text-wrap"
+                id="container-meilleurs-scores">
+                <table class="table table-success table-striped table-bordered mt-3 text-center"
+                    id="tableau-meilleurs-scores">
+                    <thead>
+                        <tr>
+                            <th scope="col">Rang</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Score</th>
+                            <th scope="col">Taille</th>
+                            <th scope="col">Temps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body-meilleurs-scores">
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="compte.html#derniers-scores"><button type="button" class="btn btn-dark-teal" id="btn-profil">
+                        Vos derniers scores
+                    </button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a class="nav-link mb-3 me-3 text-end" href="mentionsLegales.html">Mentions légales</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script type="module" src="js/jeu.js"></script>
+
+</body>
+
+</html>
