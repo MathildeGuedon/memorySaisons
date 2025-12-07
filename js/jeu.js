@@ -2,7 +2,7 @@
 
 window.onload = init;
 
-import { pathRessources } from "./utils.js";
+import { pathRessources } from "utils.js";
 
 let $plateau = $("#plateau-jeu");
 let parties = JSON.parse(localStorage.getItem("parties")) || [];
