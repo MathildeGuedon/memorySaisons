@@ -2,7 +2,7 @@
 
 window.onload = init;
 
-import { pathRessources } from "utils.js";
+import { pathRessources } from "./utils.js";
 
 let $plateau = $("#plateau-jeu");
 let parties = JSON.parse(localStorage.getItem("parties")) || [];
@@ -97,7 +97,7 @@ function miseEnPlacePlateau() {
         flipCardBack.html(
             `<img src="assets/feuilles.png" width=75% height=75% alt="envers de la carte de memory" class="position-absolute top-50 start-50 translate-middle">`
         );
-        let pathImg = "assets/"; //chemin vers l'image
+        //let pathImg = ""; //chemin vers l'image
         let card = $("<div></div>"); //image de la carte
         card.attr("id", `#card-${i}`);
         card
@@ -105,7 +105,7 @@ function miseEnPlacePlateau() {
             .addClass("col")
             .addClass("flip-card-Memory")
             .addClass("rounded");
-        pathImg += srcCartes[plateauCartes[i]];
+        let pathImg = srcCartes[plateauCartes[i]];
         card.html(
             `<img src=${pathImg} width=75% height=75% alt="endroit de la carte de memory" class=" bg-dark img-Memory position-absolute top-50 start-50 translate-middle">`
         );
