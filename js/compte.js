@@ -43,62 +43,29 @@ function afficherMiniature() {
         case "0":
             $("#affichage-miniature-memory").empty();
             $("#affichage-miniature-memory").html(
-                `<img src="../assets/automne/citrouille.png" height="150px">`
+                `<img src="assets/automne/citrouille.png" height="150px">`
             );
             break;
         case "1":
             $("#affichage-miniature-memory").empty();
             $("#affichage-miniature-memory").html(
-                `<img src="../assets/hiver/flocon.png" height="150px">`
+                `<img src="assets/hiver/flocon.png" height="150px">`
             );
             break;
         case "2":
             $("#affichage-miniature-memory").empty();
             $("#affichage-miniature-memory").html(
-                `<img src="../assets/printemps/jonquille.png" height="150px">`
+                `<img src="assets/printemps/jonquille.png" height="150px">`
             );
             break;
         case "3":
             $("#affichage-miniature-memory").empty();
             $("#affichage-miniature-memory").html(
-                `<img src="../assets/ete/ananas.png" height="150px">`
+                `<img src="assets/ete/ananas.png" height="150px">`
             );
             break;
-        // case "animaux-domestiques":
-        //     $("#affichage-miniature-memory").empty();
-        //     $("#affichage-miniature-memory").html(
-        //         `<img src="../assets/animauxdomestiques/memory_detail_animaux_domestiques.png" height="200px">`
-        //     );
-        //     break;
-        // case "chiens":
-        //     $("#affichage-miniature-memory").empty();
-        //     $("#affichage-miniature-memory").html(
-        //         `<img src="../assets/chiens/memory_details_chiens.png" height="200px">`
-        //     );
-        //     break;
-        // case "dinosaures-sans-nom":
-        //     $("#affichage-miniature-memory").empty();
-        //     $("#affichage-miniature-memory").html(
-        //         `<img src="../assets/dinosaures/memory_detail_dinosaures.png" height="200px">`
-        //     );
-        //     break;
-        // case "dinosaures-avec-nom":
-        //     $("#affichage-miniature-memory").empty();
-        //     $("#affichage-miniature-memory").html(
-        //         `<img src="../assets/dinosauresAvecNom/memory_details_dinosaures_avec_nom.png" height="200px">`
-        //     );
-        //     break;
-        // default: //legumes
-        //     $("#affichage-miniature-memory").empty();
-        //     $("#affichage-miniature-memory").html(
-        //         `<img src="../assets/memory-legume/memory_detail.png" height="200px">`
-        //     );
-        //     break;
     }
-    // let messageEnregistrementParam = $("<p></p>");
-    // messageEnregistrementParam.html(`Préférences enregistrées`);
-    // messageEnregistrementParam.attr("id", "message-enregistrement-param-jeu")
-    // messageEnregistrementParam.addClass("p-2").addClass("rounded");
+
     let messageEnregistrementParam = $(`<p id="message-enregistrement-param-jeu" class="p-2 rounded">Préférences enregistrées</p>`);
     $("#affichage-miniature-memory").append(messageEnregistrementParam);
 }
@@ -110,14 +77,8 @@ function choisirTailleMemory() {
 
 //Cette fonction permet d'enregistrer les préférences de thème et de taille du jeu
 function enregistrerParamJeu() {
-    // $choixThemeJeu = $("#select-choix-set-memory")
-    //     .find("option[selected]")
-    //     .val();
     console.log($choixThemeJeu)
     console.log($choixTailleJeu)
-    // $choixTailleJeu = $("#select-choix-taille-memory")
-    //     .find("option[selected]")
-    //     .val();
     console.log($choixTailleJeu)
     currentUser.preferences = {
         theme: $choixThemeJeu,
@@ -126,7 +87,6 @@ function enregistrerParamJeu() {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
     $("#message-enregistrement-param-jeu").css("display", "inline");
     setTimeout(() => { $("#message-enregistrement-param-jeu").fadeOut(500) }, 1000);
-    // alert("Préférences enregistrées!");
 }
 
 function afficherMessageFlashParamJeu() {
@@ -148,9 +108,6 @@ function afficherTableauScoresPerso() {
     * puis sur la taille décroissante en cas d'égalité (/le temps une fois la fonctionnalité mise en place),
     * puis sur le temps*/
     let partiesOrdonnees = [...partiesCurrentJoueur];
-    // for (let partie of partiesOrdonnees) {
-    //     partie.taille = Number.parseInt(resultat.taille)//transformation d'une String en integer
-    // }
     if (partiesOrdonnees.length > 0) {
         partiesOrdonnees.sort((a, b) => {
             if (partiesOrdonnees.length > maxPartiesJoueur) {
@@ -168,22 +125,6 @@ function afficherTableauScoresPerso() {
                 return (a.temps - b.temps);
             }
         });
-        //création et affichage du tableau du joueur
-        // let tableauScoreJoueur = $("<table></table>")
-        // tableauScoreJoueur.html(`
-        //     <thead>
-        //         <tr>
-        //             <th scope="col">Rang</th>
-        //             <th scope="col">Score</th>
-        //             <th scope="col">Taille</th>
-        //             <th scope="col">Temps</th>
-        //             <th scope="col">Date</th>
-        //         </tr>
-        //     </thead>
-        //     <tbody id="body-scores-joueur">
-        //     </tbody>
-        // `);
-        // tableauScoreJoueur.addClass()
         $bodyScoresJoueur.empty()
         for (let i = 0; i < partiesOrdonnees.length; i++) {
             let rowPartie = $("<tr></tr>");
@@ -195,18 +136,8 @@ function afficherTableauScoresPerso() {
             <td>${partiesOrdonnees[i].date}</td>
             `);
             $bodyScoresJoueur.append(rowPartie);
-            //tableauScoreJoueur.append(rowPartie);
         }
     } else {
-        //let absencePartie = $("<tr></tr>");
-        // absencePartie.attr("colspan", "5").addClass("text-center").addClass("table-striped").addClass("table-success");
-        // absencePartie.attr("id", "absencePartie")
-        // absencePartie.html("Jouez une partie pour l'afficher ici")
-        //let absencePartie.html(`<tr colspan="5">Jouez une partie pour l'afficher ici</tr>`)
-        // $bodyScoresJoueur.addClass("d-flex").addClass("justify-content-center")
-        // $bodyScoresJoueur.append(absencePartie);
-        //$("table").append(absencePartie);
-        //tableauScoreJoueur.append(rowPartie);
         let absencePartie = $("<p></p>")
         absencePartie.html("Enregistrez-vous et jouez une partie pour l'afficher ici").css("fontSize", "1.3rem");
         $("#container-table").append(absencePartie);
