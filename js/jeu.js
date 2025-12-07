@@ -95,9 +95,9 @@ function miseEnPlacePlateau() {
             .addClass("rounded")
             .addClass("d-flex");
         flipCardBack.html(
-            `<img src="../assets/feuilles.png" width=75% height=75% alt="envers de la carte de memory" class="position-absolute top-50 start-50 translate-middle">`
+            `<img src="assets/feuilles.png" width=75% height=75% alt="envers de la carte de memory" class="position-absolute top-50 start-50 translate-middle">`
         );
-        let pathImg = "../assets/"; //chemin vers l'image
+        let pathImg = "assets/"; //chemin vers l'image
         let card = $("<div></div>"); //image de la carte
         card.attr("id", `#card-${i}`);
         card
